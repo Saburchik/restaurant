@@ -15,6 +15,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    background-color: #e3ecc2;
 }
 
 *,
@@ -28,7 +29,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
     margin: 0;
 }
 
@@ -39,8 +41,28 @@ h6 {
     padding: 0 15px;
 }
 
+.text-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+}
+
+.title {
+    color: #fff;
+    font-weight: 700;
+}
+
+.description {
+    color: #fff;
+    font-weight: 400;
+}
+
 .header {
     width: 100%;
+    height: 100px;
     padding-top: 50px;
     position: absolute;
     top: 0;
@@ -58,12 +80,11 @@ h6 {
 }
 
 .nav__link {
-    color: #000;
+    color: #fff;
     font-size: 25px;
     font-weight: 500;
-    font-family: "Ubuntu-Medium";
     text-decoration: none;
-    margin: 0 25px;
+    margin: 0 0 0 25px;
 }
 
 .intro {
@@ -74,6 +95,39 @@ h6 {
     height: 100vh;
     min-height: 800px;
     position: relative;
-    background: url("../img/intro-bg.png")center no-repeat;
+}
+
+.background--blue {
+    width: 100%;
+    background: url("../img/background--blue.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
     background-size: cover;
+    min-height: 735px;
+    position: relative;
+    z-index: 2;
+}
+
+.background--orange {
+    background: url("../img/background--orange.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    position: absolute;
+    top: 85px;
+    z-index: 1;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 800px;
+}
+
+.intro__title {
+    font-size: 103px;
+}
+
+.intro__description {
+    max-width: 50%;
+    font-size: 33px;
+    margin: 0 auto;
 }
